@@ -1,6 +1,6 @@
 FROM prom/prometheus as prometheus
 
-FROM python3
+FROM python:3.7
 
 COPY --from=prometheus /bin/prom* /bin
 COPY --from=prometheus /etc/prometheus /etc/prometheus
