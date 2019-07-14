@@ -1,0 +1,2 @@
+# Keep config updated
+*/5 * * * * configupdater
