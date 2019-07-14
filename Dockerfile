@@ -3,6 +3,10 @@ FROM prom/prometheus
 
 WORKDIR /app/prometheus
 COPY requirements.txt .
+
+RUN apt-get update && apt-get install -y \
+  python3-pip 
+
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip freeze > requirements.install
 
