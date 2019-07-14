@@ -29,4 +29,4 @@ EXPOSE     9090
 VOLUME     [ "/prometheus" ]
 WORKDIR    /prometheus
 
-CMD ["SUPERVISORD"]
+CMD ["supervisord"]
