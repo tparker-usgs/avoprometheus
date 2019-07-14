@@ -25,6 +25,8 @@ ENV CONFIGUPDATER_CONFIG=/tmp/configupdater.yaml
 ADD cron-prometheus .
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
+WORKDIR    /prometheus
+WORKDIR    /prometheus/log
 EXPOSE     9090
 VOLUME     [ "/prometheus" ]
 WORKDIR    /prometheus
